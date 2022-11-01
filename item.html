@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Veggas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+    * {
+    box-sizing: border-box; 
+    }
+    body {
+        background: #fff;
+    }
+    .title-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .fst-btn {
+        background: #fff;
+        border: none;
+        float: left;
+    }
+      .nav-bar {
+         position: fixed;
+         bottom: 0px; /* sticks the side nav to the top */
+         left: 0px; /* sticks the side nav to the left side */
+         width: 100%;
+      }
+      .nav-bar a {
+         text-decoration: none;
+         color: black;
+         display: block;
+         height: auto; /* sets fixed height */
+         line-height: 60px; /* vertically centers the text */
+      }
+      .nav-bar > ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         background-color: #fff;
+         border-top: 0.8px solid #333;
+      }
+      .nav-bar > ul > li:hover {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar .active {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar li {
+         float: left;
+         background-color: white;
+         width: 21%; /* 100% / 4 (number of li elements) = 25% */
+         text-align: center;
+      }
+      .bi {
+      margin: .25rem;
+      font-size: 2.5rem;
+    }
+    .bi img {
+        width: 30px;
+        height: 30px;
+        margin: 14px;
+    }
+    .bi i {
+        color: #fff;
+    }
+    .buttonn {
+         font-family: sans-serif;
+         border: none;
+         padding: 10px 25px;
+         font-size: 20px;
+         outline: none;
+         margin: 5px 30px;
+         border-radius: 20px;
+         background-color: rgb(23, 52, 89);
+         color: #f8f9f9;
+      }
+      .info {
+         /* all four corners */
+         border-radius: 30px 30px 0px 0px;
+         width: 100%;
+         height: auto;
+         bottom: 40px;
+         margin-bottom: 50px;
+         padding: 30px;
+         color: #f8f9f9;
+         background-image: linear-gradient(to right, #483D8B , #6A5ACD );
+      }
+      .info p1,h1 {
+         color: lightgrey;
+      }
+      .info-pr {
+         /* all four corners */
+         width: 100%;
+         height: 30%;
+         margin-bottom: 15px;
+         padding: 20px;
+         color: #f8f9f9;
+      }
+      .info-pr img {
+         width: 110px;
+         height: 150px;
+         border-radius: 20px;
+      }
+      .info-pr div {
+          float: left;
+          bottom: 0;
+      }
+      h1, p1 {
+          color: rgba(0,0,0,0.6);
+      }
+      .container {
+         display: flex;
+         padding: 5px;
+      }
+      .container > div {
+         background: yellow;
+         width: 100px;
+         border-radius: 20px;
+         height: 100px;
+         margin: 5px;
+         padding: 5px;
+      }
+</style>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons.css">
+</head>
+<body>
+   <div class="nav-bar">
+      <ul>
+         <li><a href="#"><i class="bi"><img src="chat-text.svg"/></i></a></li>
+         <li><a href="#"><i class="bi"><img src="heart.svg"/></i></a></li>
+         <button class="buttonn">Purchased</button>
+      </ul>
+   </div>
+    <div class="title-bar"> 
+        <button style="margin-right: 55%" class="fst-btn"><i class="bi"><Img src="arrow-left.svg"/></i></button>
+        <button style="justify-content: left" class="fst-btn"><i class="bi"><Img src="cart.svg"/></i></button>
+    </div>
+   <div class="info-pr">
+        <div style="margin-right: 30px">
+            <h1 style=" font-weight: bold; font-size:40px;">Green tea</h1>
+            <p1>Signature product</p1>
+            <h1 style="font-weight: bold; font-size:40px; margin-top: 30px;"> R23</h1>
+        </div>
+        <div>
+            <img src="android.png"/>
+        </div>
+   </div>
+   <div class="info">
+        <h1>Particulars</h1>
+        <p1>The speciality of this shop is ice-cream full cup of joy </p1>
+        <div class="container">
+           <div> 1 </div>
+           <div> 2 </div>
+           <div> 3 </div>
+        </div>
+        <h1>Services</h1>
+        <p1>Businesses give it away for free.
+        <br>If you buy 2 cup of ice-cream, you claim one for free</p1>
+   </div>
+</body>

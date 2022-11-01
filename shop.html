@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Veggas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+    * {
+    box-sizing: border-box; 
+    }
+    body {
+        background: #fff;
+        padding: 10px;
+    }
+    .title-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .titlee {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .fst-btn {
+        background: #fff;
+        border: none;
+        float: left;
+    }
+      .scroll {
+         display: flex;
+         width: 780px;
+      }
+      .btm-lst {
+          margin-bottom: 30px;
+      }
+      .btm-lst .btm-itm { 
+          margin: 2px 2px 5px 0px;
+          width: 100%;
+          line-height: 1px;
+          padding: 01px;
+      }
+      .btm-lst .btm-itm:hover { 
+          background-color: rgba(0,0,0,0.4);
+          border-radius: 15px;
+      }
+      .btm-lst > .btm-itm {
+          display: flex;
+          align-items: center;
+      }
+      .btm-lst > .btm-itm > h2 {
+         justify-content: flex-end;
+         font-size: 30px;
+         font-weight: bold;
+      }
+      .btm-lst > .btm-itm > div {
+          padding: 5px;
+          width: 190px;
+          color: rgba(0,0,0,0.7);
+      }
+      .btm-lst > .btm-itm > img {
+          width: 80px;
+          height: 80px;
+          margin: 10px;
+          box-shadow: 0 05px 10px rgba(0,0,0,0.30), 0 7px 8px rgba(0,0,0,0.22);
+          border-radius: 15px;
+      }
+      .nav-bar {
+         position: fixed;
+         bottom: 0px; /* sticks the side nav to the top */
+         left: 0px; /* sticks the side nav to the left side */
+         width: 100%;
+      }
+      .nav-bar a {
+         text-decoration: none;
+         color: black;
+         display: block;
+         height: auto; /* sets fixed height */
+         line-height: 60px; /* vertically centers the text */
+      }
+      .nav-bar > ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         border-top: 0.8px solid #333;
+      }
+      .nav-bar > ul > li:hover {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar .active {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar li {
+         float: left;
+         background-color: white;
+         width: 33.33%; /* 100% / 4 (number of li elements) = 25% */
+         text-align: center;
+      }
+      .bi {
+      margin: .25rem;
+      font-size: 2.5rem;
+    }
+    .bi img {
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+    }
+    .bi i {
+        color: #fff;
+    }
+    .label {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      padding: 0;
+      color: rgb(#fff,0,0);
+      font-size: .625rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .buttonn {
+         font-family: sans-serif;
+         border: none;
+         padding: 10px 25px;
+         font-size: 20px;
+         align-item: center;
+         outline: none;
+         width: 80%;
+         margin: 0px 30px 60px 30px;
+         border-radius: 20px;
+         background-color: rgb(23, 52, 89);
+         color: #f8f9f9;
+      }
+      .input-cnt {
+         display: flex; /* display the icon and the input in a line */
+         margin: 0px 30px 60px 30px;
+      }
+      .input-cnt > i {
+         min-width: 60%; /* set a minimum width for the icon */
+         padding: 10px; /* make sure the icon is centered vertically */
+         text-align: center; /* horizontally center the icon */
+         background: lightgrey;
+         border-top-left-radius: 20px;
+         border-bottom-left-radius: 20px;
+         color: #0076ff;
+      }
+      /* change styles when focused */
+      .input-cnt:hover > i {
+         background: #0076ff;
+         color: white;
+      }
+      /* style the input and textarea */
+      .input-cnt > button {
+         outline: none;
+         border: none;
+         padding: 10px;
+         border: 1px solid lightgrey;
+         border-top-right-radius: 20px;
+         border-bottom-right-radius: 20px;
+         width: auto;
+      }
+</style>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons.css">
+</head>
+<body>
+   <div class="nav-bar">
+      <ul>
+         <li class="active"><a href="#"><i class="bi"><img src="home.svg"/></i></a><label class="label">Home</label></li>
+         <li><a href="#"><i class="bi"><img src="shop.svg"/></i></a><label class="label">Shop</label></li>
+         <li><a href="#"><i class="bi"><img src="person.svg"/></i></a><label class="label">Me</label></li>
+      </ul>
+   </div>
+    <div class="title-bar"> 
+        <button class="fst-btn"><i class="bi"><Img src="arrow-left.svg"/></i></button>
+        <button style="justify-content: left" class="fst-btn"><i class="bi"><Img src="cart.svg"/></i></button>
+    </div>
+    <div class="titlee">
+        <h1> Shopping cart </h1>
+        <p1>A total of 3 item</p1>
+    </div>
+    <div class="btm-lst">
+        <div class="btm-itm"> 
+            <img src="android.png"/>
+            <div class="">
+               <h2>Coffee</h2>
+               <p>coffee ingredients</p>
+               <h3>R23</h3>
+            </div>
+            <h3>+ <br/> 1 <br />-</h3>
+        </div>
+        <div class="btm-itm"> 
+            <img src="android.png"/>
+            <div class="">
+               <h2>Coffee</h2>
+               <p>coffee ingredients</p>
+            </div>
+            <h2>R23</h2>
+        </div>
+        <div class="btm-itm"> 
+            <img src="android.png"/>
+            <div class="">
+               <h2>Coffee</h2>
+               <p>coffee ingredients</p>
+            </div>
+            <h2>R23</h2>
+        </div>
+        <div class="btm-itm"> 
+            <img src="android.png"/>
+            <div class="">
+               <h2>Coffee</h2>
+               <p>coffee ingredients</p>
+            </div>
+            <h2>R23</h2>
+        </div>
+    </div>
+    <div class="input-cnt">
+        <i class="material-icons">Total <b>R92</b></i>
+        <button>Purchase</button>
+    </div>
+</body>
