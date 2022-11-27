@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Veggas </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="plugins/css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="nav-bar">
+      <ul>
+         <li id="home-bt" class="active"><a><i class="material-icons bi">home</i></a><label class="label">Home</label></li>
+         <li><a id="cart-bt"><i class="material-icons bi">store</i></a><label class="label">Shop</label></li>
+         <li><a id="user-bt"><i class="material-icons bi">person</i></a><label class="label">Me</label></li>
+      </ul>
+   </div>
+   <div id="homepg">
+    <div class="title-bar"> 
+        <h2> Veggas </h2>
+        <button><i class="material-icons bi">chat</i></button>
+    </div>
+    
+    <div class="search-bar">
+        <input type="text" placeholder="Search here"/>
+    </div>
+    
+    <div class="menu-bar">
+      <ul>
+         <li><a href="#" > Recommend </a></li>
+         <li><a href="#"> Black tea </a></li>
+         <li><a href="#"> Green tea </a></li>
+         <li><a href="#"> Milky tea </a></li>
+      </ul>
+    </div>
+   
+    <div class="top-lst">
+       <div class="scroll" id="top-lst">
+        <div class="top-itm">
+            <div class="img"><i class="material-icons bi">image</i></div>
+            <div class="text">
+              <h3>Coffee</h3>
+            </div>
+        </div>
+        <div class="top-itm">
+            <div class="img"><i class="material-icons bi">image</i></div>
+            <div class="text">
+              <h3>Coffee</h3>
+            </div>
+        </div>
+       </div>
+    </div>
+   
+    <h3 class="title"> Special </h3>
+   
+    <div class="btm-lst" id="btm-lst">
+        <div class="btm-itm"> 
+            <span class="img"><i class="material-icons bi">image</i></span>
+            <div class="det">
+               <h2>-</h2>
+               <p>-</p>
+            </div>
+            <h2>R-</h2>
+        </div>
+        <div class="btm-itm"> 
+            <span class="img"><i class="material-icons bi">image</i></span>
+            <div class="det">
+               <h2>-</h2>
+               <p>-</p>
+            </div>
+            <h2>R-</h2>
+        </div>
+    </div>
+   </div>
+   
+   <!-item page viewer-!>
+   <div id="itempg">
+   <div class="nav-crt">
+      <ul>
+         <li><a href="#"><i class="material-icons bi">edit_note</i></a><label class="label">Note</label></li>
+         <li><a href="#"><i class="material-icons bi">favorite</i></a><label class="label">Favorite</label></li>
+         <button class="buttonn">Purchased</button>
+      </ul>
+   </div>
+   
+    <div class="cntrl-bar"> 
+        <button onclick="back_btn()" style="margin-right: 65%"><i class="material-icons bi">arrow_back</i></button>
+        <button><i class="material-icons bi">shopping_cart</i></button>
+    </div>
+    
+    <div class="info-pr">
+        <div style="width: 190px">
+            <h1 id="itm-nm" style=" font-weight: bold; font-size:40px;">Green tea</h1>
+            <p1 id="itm-in">Signature product</p1>
+            <h1 id="itm-pr"style="font-weight: bold; font-size:40px; margin-top: 30px;"> R23</h1>
+        </div>
+        <div>
+             <img src="android.png"/>
+        </div>
+    </div>
+    
+    <div class="info">
+        <h1>Particulars</h1>
+        <p1>The speciality of this shop is ice-cream full cup of joy </p1>
+        <div class="icon-dtl">
+           <div> 1 </div>
+           <div> 2 </div>
+           <div> 3 </div>
+        </div>
+        <div class="info-more" >
+        <h1>Services</h1>
+        <p1>Businesses give it away for free.
+        <br>If you buy 2 cup of ice-cream, you claim one for free</p1>
+        </div>
+    </div>
+   </div>
+   
+   <!-shopping cart viewer-!>
+   <div id="cartpg">
+    <div class="cntrl-bar"> 
+        <button style="margin-right: 65%"><i class="material-icons bi">arrow_back</i></button>
+        <button><i class="material-icons bi">shopping_cart</i></button>
+    </div>
+    <div class="section">
+    <div class="crt-info">
+        <h1> Shopping cart </h1>
+        <p1>A total of <p1 id="added-itm"></p1> item</p1>
+    </div>
+    
+    <div id="table" class="table">
+    <table>
+      <tbody id="tbody">
+        <tr class="tr">
+          <td>
+              <img src="android.png"/>
+          </td>
+          <td class="itm-det">
+                 <h2>item name</h2>
+                 <p1>item details and other</p1>
+                 <h3>R -</h3>
+          </td>
+          <td class="itm-coun">
+               <h4>+</h4>
+               <h4>()</h4>
+               <h4>–</h4>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+   </div>
+   
+   <script src="plugins/js/jquery-3.6.1.min.js"></script>
+   <script src="script.js"></script>
+   <script>
+       zx=document.getElementById("itempg");
+       za=zx.style.display="none";
+       zc=document.getElementById("cartpg");
+       zs=zc.style.display="none";
+       zv=document.getElementById("homepg");
+       zv.style.display="block"
+       
+       document.getElementById("home-bt").onclick=function(){
+           if(zc.style.display="block"){
+               zc.style.display="none";
+               zv.style.display="block";
+           }
+           $("#home-bt").addClass("active");
+           $("#cart-bt").removeClass("active");
+       }
+       document.getElementById("cart-bt").onclick=function(){
+           if(zv.style.display="block"){
+               zv.style.display="none";
+               zc.style.display="block";
+           }
+           $("#cart-bt").addClass("active");
+           $("#home-bt").removeClass("active");
+       }
+       document.getElementById("user-bt").onclick=function(){
+           alert("user")
+       }
+       
+       function back_btn(){
+           if(zx.style.display="block"){
+               zx.style.display="none";
+               zv.style.display="block";
+           }
+       }
+   </script>
+</body>
